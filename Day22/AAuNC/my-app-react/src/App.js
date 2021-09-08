@@ -1,8 +1,8 @@
-import './App.css';
-import Header from './components/Header/Header.js';
-import Banner from './components/Banner/Banner.js';
-import Text from './components/Text/Text.js';
-import Form from './components/Form/Form.js';
+import "./App.css";
+import Header from "./components/Header/Header.js";
+import Banner from "./components/Banner/Banner.js";
+import Text from "./components/Text/Text.js";
+import Form from "./components/Form/Form.js";
 
 function App() {
   return (
