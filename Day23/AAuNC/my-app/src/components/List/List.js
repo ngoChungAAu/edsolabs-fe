@@ -1,35 +1,9 @@
 import './List.css';
 import { Grid, Paper, Typography, CardMedia } from "@material-ui/core";
 
-export default function List(prop) {
-    const { threeDay } = prop;
-    function getWeekday(day) {
-        switch (day) {
-            case 0:
-                return 'Sun';
-                break;
-            case 1:
-                return 'Mon';
-                break;
-            case 2:
-                return 'Tue';
-                break;
-            case 3:
-                return 'Wed';
-                break;
-            case 4:
-                return 'Thu';
-                break;
-            case 5:
-                return 'Fri';
-                break;
-            case 6:
-                return 'Sat';
-                break;
-
-        }
-    };
-
+export default function List(props) {
+    const { threeDay } = props;
+    
     return (
         <>
             <Grid container justifyContent="space-between" spacing={4} className="list">
@@ -39,7 +13,8 @@ export default function List(prop) {
                     return (
                         <Grid key={index} item xs={3} >
                             <Paper className="day-item">
-                                <Typography component="p">{getWeekday(date.getDay())}</Typography>
+                                <Typography component="p">
+                                    {new Intl.DateTimeFormat("en-US", { weekday: "short" }).format(date)}</Typography>
                                 <Typography component="p">{date.getDate()}/{date.getMonth() + 1}</Typography>
                                 <CardMedia
                                     component="img"

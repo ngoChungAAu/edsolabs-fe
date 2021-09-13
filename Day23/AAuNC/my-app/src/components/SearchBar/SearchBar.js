@@ -4,9 +4,9 @@ import { Search } from "@material-ui/icons";
 import React, { useState, useEffect } from 'react';
 
 
-export default function SearchBar(prop) {
+export default function SearchBar(props) {
 
-    const { getCity } = prop;
+    const { getCity } = props;
 
     const [value, setValue] = useState('');
 
@@ -14,7 +14,6 @@ export default function SearchBar(prop) {
         e.preventDefault();
         getCity(value);
         if(value === "") alert("Bạn chưa nhập thành phố!!!")
-        if(value === e.target.value) alert("Nothing")
 
     };
 

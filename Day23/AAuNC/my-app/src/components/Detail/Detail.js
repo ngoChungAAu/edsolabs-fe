@@ -1,8 +1,8 @@
 import './Detail.css'
 import { Card, CardHeader, CardContent, CardMedia, Grid, Typography } from '@material-ui/core';
 
-export default function Detail(prop) {
-  const { today } = prop;
+export default function Detail(props) {
+  const { today } = props;
 
   return (
     <>
