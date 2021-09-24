@@ -48,7 +48,7 @@ export default function Login() {
       <h2 align="center">Admin login</h2>
       <form onSubmit={handleSubmit}>
         <FormGroup>
-          <p className={styles.p}>Username</p>
+          <p className={styles.p}>Email</p>
           <InputText type="text" getValue={getEmail} />
         </FormGroup>
 
