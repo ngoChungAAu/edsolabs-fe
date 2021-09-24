@@ -12,7 +12,7 @@ function App() {
       JSON.parse(localStorage.getItem('isLogged')) === true
         ? <Component {...props} />
         : <Redirect to={{
-            pathname: '/'
+            pathname: '/login'
           }} />
     )} />
   )
@@ -21,10 +21,10 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/login">
             <Login />
           </Route>
-          <PrivateRoute path='/timer' component={TimerPage} />
+          <PrivateRoute path='/' component={TimerPage} />
           <PrivateRoute path='/report' component={ReportPage} />
         </Switch>
       </Router>

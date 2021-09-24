@@ -13,7 +13,7 @@ export default function Sidebar() {
 
     const logOut = () => {
         localStorage.clear();
-        history.push('/');
+        history.push('/login');
     }
 
     return (
@@ -28,7 +28,7 @@ export default function Sidebar() {
 
                 <CardContent style={{ padding: '0px' }}>
                     <MenuList>
-                        <MenuItem component={Link} to="/timer">
+                        <MenuItem component={Link} to="/">
                             <ListItemIcon>
                                 <ScheduleIcon />
                             </ListItemIcon>
